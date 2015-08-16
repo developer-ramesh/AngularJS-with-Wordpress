@@ -20,12 +20,12 @@
 <!--<![endif]-->
 <head>
 <base href="/AngularJS-with-Wordpress/">
-<!--<meta charset="<?php bloginfo( 'charset' ); ?>">
+<meta charset="<?php bloginfo( 'charset' ); ?>">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title><?php wp_title( '|', true, 'right' ); ?></title>
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
-<script src="<?php echo get_stylesheet_directory_uri(); ?>/js/html5.js"></script> -->
+<script src="<?php echo get_stylesheet_directory_uri(); ?>/js/html5.js"></script>
 <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?> role="document">

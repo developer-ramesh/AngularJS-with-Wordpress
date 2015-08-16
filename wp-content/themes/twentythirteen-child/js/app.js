@@ -7,12 +7,14 @@ app.run(['$rootScope', function($rootScope){
 }]);
 
 app.config(function ($routeProvider, $locationProvider) {
+   // alert(path.url);
     $routeProvider
     
     //.when('/:pagename',{controller: 'RouteCtrl',templateUrl: 'uirouter.html'})
     .when('/about',{controller: 'RouteCtrl',templateUrl: 'about'})
-    .when('/home',{controller: 'RouteCtrl',templateUrl: 'home'})
+    .when('/home',{controller: 'RouteCtrl',templateUrl: 'index'})
     .when('/contact',{controller: 'RouteCtrl',templateUrl: 'contact'})
+    .when('/gallery',{controller: 'RouteCtrl',templateUrl: 'gallery'})
     
     .otherwise({redirectTo: '/'});
      
@@ -29,6 +31,7 @@ app.config(function ($routeProvider, $locationProvider) {
 
 
 app.controller("fn", function($scope,$http) {
+    console.log('hi');
     $scope.heading = "Simple Example using AngularJS !!!";
     $scope.add_prod = true;
     

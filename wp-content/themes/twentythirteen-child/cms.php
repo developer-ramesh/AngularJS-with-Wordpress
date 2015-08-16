@@ -2,10 +2,7 @@
 /* 
 Template Name:CMS Temp
 */
-get_header(); ?>
-
-<div style="min-height: 400px;width: 100%;">
-
+//get_header(); ?>
 
 <?php
 while ( have_posts() ) : the_post();
@@ -15,9 +12,4 @@ while ( have_posts() ) : the_post();
 <?php the_content(); endwhile; ?>
 
 
-</div>
-
-
-
-
-<?php get_footer(); ?>
+<?php //get_footer(); ?>
