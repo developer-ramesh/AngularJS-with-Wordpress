@@ -29,13 +29,3 @@
 <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?> role="document">
-
-    
-<div style="min-height: 100px; width: 100%;border: 1px solid grey;background-color:rgb(166, 161, 161);">
-	<?php 
-	$top_menu= array('menu'=> 'my-test-menu','theme_location' => 'primary',
-	'container' => '',
-	);
-	wp_nav_menu($top_menu); 
-	?>
-</div>

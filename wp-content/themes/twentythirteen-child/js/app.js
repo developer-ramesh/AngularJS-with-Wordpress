@@ -7,16 +7,14 @@ app.run(['$rootScope', function($rootScope){
 }]);
 
 app.config(function ($routeProvider, $locationProvider) {
-   // alert(path.url);
     $routeProvider
-    
     //.when('/:pagename',{controller: 'RouteCtrl',templateUrl: 'uirouter.html'})
+    
     .when('/about',{controller: 'RouteCtrl',templateUrl: 'about'})
-    .when('/home',{controller: 'RouteCtrl',templateUrl: 'index'})
     .when('/contact',{controller: 'RouteCtrl',templateUrl: 'contact'})
     .when('/gallery',{controller: 'RouteCtrl',templateUrl: 'gallery'})
-    
-    .otherwise({redirectTo: '/'});
+    .when('/', {controller  : 'RouteCtrl',templateUrl : 'home'})
+//    .otherwise({redirectTo: '/'});
      
      $locationProvider.html5Mode(true);
  });
