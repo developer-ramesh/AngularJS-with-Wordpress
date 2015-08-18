@@ -20,10 +20,12 @@ app.config(function ($routeProvider, $locationProvider) {
  });
  
 
-  app.controller('RouteCtrl', function($scope,$routeParams) {
-    // create a message to display in our view 
-    //$scope.page=$routeParams.pagename;
-    //$scope.message = $routeParams.pagename;
+  app.controller('RouteCtrl', function($scope,$http,$routeParams) {
+     $scope.site_url='servername'; 
+     $scope.nam=path.site; 
+      $http.get("http://localhost/AngularJS-with-Wordpress/wp-content/themes/twentythirteen-child/server-file-1.php?action=get_data").success(function(data){
+            console.log(data);
+      });
   });
 
 
