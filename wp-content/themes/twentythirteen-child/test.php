@@ -9,3 +9,5 @@
 <div ng-if="site_url ==='http://localhost/AngularJS-with-Wordpress/wp-content/themes/twentythirteen-child/'">
     <p>TTTTTTTTTTTTTTTTTTTTT</p>
 </div>
+
+<p class="test-class"></p>

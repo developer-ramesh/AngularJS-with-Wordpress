@@ -26,9 +26,18 @@ app.config(function ($routeProvider, $locationProvider) {
       $http.get("http://localhost/AngularJS-with-Wordpress/wp-content/themes/twentythirteen-child/server-file-1.php?action=get_data").success(function(data){
             console.log(data);
       });
+      
+      $scope.load = function() {
+       jQuery('.test-class').text('It is Dome Element!!!');
+       stuffController();
+      };
+      $scope.load();      
+      
   });
 
-
+function stuffController() {
+    alert('sss');
+}
 
 app.controller("fn", function($scope,$http) {
     console.log('hi');
