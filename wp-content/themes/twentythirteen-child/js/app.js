@@ -6,6 +6,22 @@ app.run(['$rootScope', function($rootScope){
   $rootScope.site = path.site;
 }]);
 
+app.directive('loading', function () {
+      return {
+        restrict: 'E',
+        replace:true,
+        template: '<div class="loading"><img src="http://localhost/AngularJS-with-Wordpress/wp-content/themes/twentythirteen-child/images/ajax-loader.gif" width="20" height="20" />LOADING...</div>',
+        link: function (scope, element, attr) {
+              scope.$watch('loading', function (val) {
+                  if (val)
+                      $(element).show();
+                  else
+                      $(element).hide();
+              });
+        }
+      }
+  });
+
 app.config(function ($routeProvider, $locationProvider) {
     $routeProvider
     //.when('/:pagename',{controller: 'RouteCtrl',templateUrl: 'uirouter.html'})
@@ -21,6 +37,7 @@ app.config(function ($routeProvider, $locationProvider) {
  
 
   app.controller('RouteCtrl', function($scope,$http,$routeParams) {
+       $scope.loading = true;
      $scope.site_url='servername'; 
      $scope.nam=path.site; 
       $http.get("http://localhost/AngularJS-with-Wordpress/wp-content/themes/twentythirteen-child/server-file-1.php?action=get_data").success(function(data){
@@ -32,11 +49,12 @@ app.config(function ($routeProvider, $locationProvider) {
        stuffController();
       };
       $scope.load();      
+      $scope.loading = false;
       
   });
 
 function stuffController() {
-    alert('sss');
+    //alert('sss');
 }
 
 app.controller("fn", function($scope,$http) {
